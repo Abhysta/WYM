@@ -71,7 +71,7 @@
                                     <ul class="dropdown">
                                         <li><a href="./login.html"><?= $user['name'];?></a></li>
                                         <li><a href="./login.html"><?= $user['email'];?></a></li>
-                                        <li><a href="<?= base_url()?>">Logout</a></li>
+                                        <li><a href="<?=  base_url('auth/logout')?>">Logout</a></li>
                                     </ul>
                                 </li>
                             </ul>

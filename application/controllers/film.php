@@ -47,7 +47,7 @@ class Film extends CI_Controller {
 
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path'] = './assets/film/';
-            $config['allowed_types'] = 'gif|jpg|png|jpeg|ico';
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|ico|jfif';
             $config['max_size']     = '10000';
 
             $this->upload->initialize($config);
@@ -120,7 +120,7 @@ class Film extends CI_Controller {
 
         if ($this->form_validation->run() == TRUE) {
             $config['upload_path'] = './assets/film/';
-            $config['allowed_types'] = 'gif|jpg|png|jpeg|ico';
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|ico|jfif';
             $config['max_size']     = '2000';
 
             $this->upload->initialize($config);

@@ -2,7 +2,7 @@
     <div class="scrollbar-inner sidebar-wrapper">
         <div class="user">
             <div class="photo">
-                <img src="<?= base_url()?>assets\userwym.png">
+                <img src="<?= base_url()?>assets/owner/useric.png">
             </div>
             <div class="info">
                 <a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">

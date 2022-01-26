@@ -51,18 +51,7 @@ class Admin extends CI_Controller{
    public function Advanced(){
 
       $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-      $data ['judul']= 'Halaman advanced';
-      $data['getGenre'] = $this->m_admin->getGenre();
-      $data['getCountry'] = $this->m_admin->getCountry();
-      $data['getType'] = $this->m_admin->getType();
-    $this->load->view('admin/header', $data);
-    $this->load->view('admin/advanced', $data);
-    $this->load->view('admin/footer');
-   }
-
-   public function Advance_result(){
-      $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-      $data ['judul']= 'Halaman advanced';
+      $data ['judul']= 'Halaman Advanced';
       $genre = $this->input->post('id_genre');
       $country = $this->input->post('id_country');
       $type = $this->input->post('id_type');
@@ -71,10 +60,26 @@ class Admin extends CI_Controller{
       $getType = $this->m_admin->getType();
       $hasil = $this->m_admin->getHasil($genre, $country, $type);
 
-      $this->load->view('admin/header', [$data, 'getGenre' => $getGenre, 'getCountry' => $getCountry, 'getType' => $getType, 'hasil' => $hasil]);
-      $this->load->view('admin/advanced_result');
-      $this->load->view('admin/footer');
+    $this->load->view('admin/header', ['user' => $data['user'], 'judul' => $data['judul'], 'getGenre' => $getGenre, 'getCountry' => $getCountry, 'getType' => $getType, 'hasil' => $hasil]);
+    $this->load->view('admin/advanced');
+    $this->load->view('admin/footer');
    }
+
+   // public function Advance_result(){
+   //    $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+   //    $data ['judul']= 'Halaman Advanced';
+   //    $genre = $this->input->post('id_genre');
+   //    $country = $this->input->post('id_country');
+   //    $type = $this->input->post('id_type');
+   //    $getGenre = $this->m_admin->getGenre();
+   //    $getCountry = $this->m_admin->getCountry();
+   //    $getType = $this->m_admin->getType();
+   //    $hasil = $this->m_admin->getHasil($genre, $country, $type);
+
+   //    $this->load->view('admin/header', ['user' => $data['user'], 'judul' => $data['judul'], 'getGenre' => $getGenre, 'getCountry' => $getCountry, 'getType' => $getType, 'hasil' => $hasil]);
+   //    $this->load->view('admin/advanced_result');
+   //    $this->load->view('admin/footer');
+   // }
 
    public function about(){
       $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();

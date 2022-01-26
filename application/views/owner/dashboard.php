@@ -34,72 +34,14 @@
 			                    <a class="dropdown-item" href="#">Something else here</a>
 			                </div>
 			            </li>
-			            <li class="nav-item dropdown hidden-caret">
-			                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-			                    aria-haspopup="true" aria-expanded="false">
-			                    <i class="fas fa-bell"></i>
-			                    <span class="notification">3</span>
-			                </a>
-			                <ul class="dropdown-menu notif-box" aria-labelledby="navbarDropdown">
-			                    <li>
-			                        <div class="dropdown-title">You have 4 new notification</div>
-			                    </li>
-			                    <li>
-			                        <div class="notif-center">
-			                            <a href="#">
-			                                <div class="notif-icon notif-primary"> <i class="fas fa-user-plus"></i> </div>
-			                                <div class="notif-content">
-			                                    <span class="block">
-			                                        New user registered
-			                                    </span>
-			                                    <span class="time">5 minutes ago</span>
-			                                </div>
-			                            </a>
-			                            <a href="#">
-			                                <div class="notif-icon notif-success"> <i class="fas fa-comment"></i> </div>
-			                                <div class="notif-content">
-			                                    <span class="block">
-			                                        Rahmad commented on Admin
-			                                    </span>
-			                                    <span class="time">12 minutes ago</span>
-			                                </div>
-			                            </a>
-			                            <a href="#">
-			                                <div class="notif-img">
-			                                    <img src="<?= base_url()?>assets\userwym.png" alt="Img Profile">
-			                                </div>
-			                                <div class="notif-content">
-			                                    <span class="block">
-			                                        Reza send messages to you
-			                                    </span>
-			                                    <span class="time">12 minutes ago</span>
-			                                </div>
-			                            </a>
-			                            <a href="#">
-			                                <div class="notif-icon notif-danger"> <i class="fas fa-heart"></i> </div>
-			                                <div class="notif-content">
-			                                    <span class="block">
-			                                        Farrah liked Admin
-			                                    </span>
-			                                    <span class="time">17 minutes ago</span>
-			                                </div>
-			                            </a>
-			                        </div>
-			                    </li>
-			                    <li>
-			                        <a class="see-all" href="javascript:void(0);"> <strong>See all notifications</strong> <i
-			                                class="fas fa-angle-right"></i> </a>
-			                    </li>
-			                </ul>
-			            </li>
 			            <li class="nav-item dropdown">
 			                <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img
-			                        src="<?= base_url()?>assets\userwym.png" alt="user-img" width="36"
+			                        src="<?= base_url()?>assets/owner/useric.png" alt="user-img" width="36"
 			                        class="img-circle"><span>Admin</span></span> </a>
 			                <ul class="dropdown-menu dropdown-user">
 			                    <li>
 			                        <div class="user-box">
-			                            <div class="u-img"><img src="<?= base_url()?>assets\userwym.png"></div>
+			                            <div class="u-img"><img src="<?= base_url()?>assets/owner/useric.png"></div>
 			                            <div class="u-text">
 			                                <h4>Admin</h4>
 			                                <p class="text-muted">user@wym.com</p><a href="profile.html"
@@ -114,7 +56,7 @@
 			                    <div class="dropdown-divider"></div>
 			                    <a class="dropdown-item" href="#"><i class="ti-settings"></i> Account Setting</a>
 			                    <div class="dropdown-divider"></div>
-			                    <a class="dropdown-item" href="#"><i class="fa fa-power-off"></i> Logout</a>
+			                    <a class="dropdown-item" href="<?=  base_url('auth/logout')?>"><i class="fa fa-power-off"></i> Logout</a>
 			                </ul>
 			                <!-- /.dropdown-user -->
 			            </li>
